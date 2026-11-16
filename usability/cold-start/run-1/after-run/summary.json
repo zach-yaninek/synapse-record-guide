@@ -1,0 +1,53 @@
+{
+  "requested_at": "2026-11-15T23:05:16Z",
+  "statuses": {
+    "mobility": "differing_accounts",
+    "eating": "differing_accounts"
+  },
+  "standing_entries": {
+    "mobility": [
+      10,
+      14
+    ],
+    "eating": [
+      1,
+      7
+    ]
+  },
+  "changed_entry": 7,
+  "value_before": "Ate most of breakfast and about half of lunch; drank two cups of water.",
+  "value_relayed": "Ate most of breakfast and all of lunch; drank two cups of water.",
+  "unchanged_claim_check": {
+    "person_id": "person-a",
+    "purpose": "shift_handoff",
+    "as_of": "2026-11-15T23:05:17Z",
+    "checks": [
+      {
+        "item_kind": "eating",
+        "result": "matches_record",
+        "problems": []
+      }
+    ],
+    "meaning": "Each claim was checked against the record: every cited entry exists, belongs to this person and item kind, matches what is stored, and is a standing account, and no standing account was left out. This proves correspondence to the record, not that any entry is true."
+  },
+  "relayed_claim_check": {
+    "person_id": "person-a",
+    "purpose": "shift_handoff",
+    "as_of": "2026-11-15T23:05:18Z",
+    "checks": [
+      {
+        "item_kind": "eating",
+        "result": "differs_from_record",
+        "problems": [
+          "value_mismatch"
+        ]
+      }
+    ],
+    "meaning": "Each claim was checked against the record: every cited entry exists, belongs to this person and item kind, matches what is stored, and is a standing account, and no standing account was left out. This proves correspondence to the record, not that any entry is true."
+  },
+  "sha256": {
+    "brief-before-run.json": "761529662984b8ad3b115a0ed8d5b5236b4eb52f7a39a1b7f9528322bdf4a8c1",
+    "relayed-claim.json": "bcfdefb52be45f187175ed42dffb869d50042ecd1b65dc95fa460af8843cc0ec",
+    "checks-before-run.json": "07f041dd6ff47a08a4dbca017e76047e763419663213362602881f2f73ad231b"
+  }
+}

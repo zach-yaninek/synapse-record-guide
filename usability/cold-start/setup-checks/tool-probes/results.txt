@@ -1,0 +1,6 @@
+{"claude_version": "2.1.325 (Claude Code)"}
+{"flags": "--bare --restricted --tools Read,Write,Edit,Glob,Grep (the harness)", "tools": ["Edit", "Read"], "ended": "Invalid API key \u00b7 Fix external API key", "cost_usd": 0}
+{"flags": "--bare --tools Read,Write,Edit,Glob,Grep", "tools": ["Edit", "Read"], "ended": "Invalid API key \u00b7 Fix external API key", "cost_usd": 0}
+{"flags": "--bare --restricted --tools default", "tools": ["Edit", "Read"], "ended": "Invalid API key \u00b7 Fix external API key", "cost_usd": 0}
+{"flags": "--bare --tools default", "tools": ["Bash", "Edit", "Read"], "ended": "Invalid API key \u00b7 Fix external API key", "cost_usd": 0}
+{"flags": "--bare --restricted --tools Write", "tools": [], "ended": "Invalid API key \u00b7 Fix external API key", "cost_usd": 0}

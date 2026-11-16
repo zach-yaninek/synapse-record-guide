@@ -1,0 +1,415 @@
+{
+  "started_at": "2026-11-16T04:10:13Z",
+  "url_kind": "loopback",
+  "cases": [
+    {
+      "case": "a well-formed call (control)",
+      "tool": "my_grants",
+      "breaks": null,
+      "arguments": {
+        "person_id": "person-a"
+      },
+      "http_status": 200,
+      "is_error": false,
+      "answer": {
+        "ok": true,
+        "result": {
+          "grants": [
+            {
+              "grant_id": 1,
+              "person_id": "person-a",
+              "grantee_agent_id": "agent-gardens-shift",
+              "purposes": [
+                "shift_handoff"
+              ],
+              "item_kinds": [
+                "mobility",
+                "eating",
+                "medications",
+                "sleep",
+                "appointments",
+                "routine",
+                "discharge_summary",
+                "note"
+              ],
+              "actions": [
+                "read"
+              ],
+              "not_before": "2026-10-28T06:34:34Z",
+              "expires_at": "2026-11-27T06:34:34Z",
+              "approved_by": "<workos-user-id>",
+              "approved_at": "2026-10-28T06:34:34Z",
+              "from_request_id": 1,
+              "grantee_principal_id": "<workos-organization-id>"
+            }
+          ],
+          "requests": [
+            {
+              "request_id": 1,
+              "person_id": "person-a",
+              "requester_agent_id": "agent-gardens-shift",
+              "purposes": [
+                "shift_handoff"
+              ],
+              "item_kinds": [
+                "mobility",
+                "eating",
+                "medications",
+                "contacts",
+                "sleep",
+                "appointments",
+                "routine",
+                "discharge_summary",
+                "note"
+              ],
+              "actions": [
+                "read"
+              ],
+              "window_days": 30,
+              "reason": "She returns to Example Gardens after her hospital stay; the evening shift needs her current picture.",
+              "requested_at": "2026-10-28T06:33:57Z",
+              "expires_at": "2026-10-31T06:33:57Z",
+              "requester_principal_id": "<workos-organization-id>",
+              "state": "approved"
+            },
+            {
+              "request_id": 3,
+              "person_id": "person-a",
+              "requester_agent_id": "agent-gardens-shift",
+              "purposes": [
+                "shift_handoff"
+              ],
+              "item_kinds": [
+                "mobility"
+              ],
+              "actions": [
+                "read"
+              ],
+              "window_days": 1,
+              "reason": "Hosted passkey acceptance test for the synthetic household.",
+              "requested_at": "2026-11-10T08:21:19Z",
+              "expires_at": "2026-11-13T08:21:19Z",
+              "requester_principal_id": "<workos-organization-id>",
+              "state": "approved"
+            }
+          ]
+        }
+      },
+      "names_argument": false
+    },
+    {
+      "case": "purpose is not a published purpose",
+      "tool": "request_brief",
+      "breaks": "enum",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "handoff",
+        "item_kinds": [
+          "mobility"
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "purpose",
+        "problem": "enum"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "item kind capitalized",
+      "tool": "request_brief",
+      "breaks": "enum",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "item_kinds": [
+          "Mobility"
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "item_kinds[0]",
+        "problem": "enum"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "purpose left out",
+      "tool": "request_brief",
+      "breaks": "required",
+      "arguments": {
+        "person_id": "person-a",
+        "item_kinds": [
+          "mobility"
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "purpose",
+        "problem": "required"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "item kinds sent as a string",
+      "tool": "request_brief",
+      "breaks": "type",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "item_kinds": "mobility"
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "item_kinds",
+        "problem": "type"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "an argument the tool does not take",
+      "tool": "request_brief",
+      "breaks": "additionalProperties",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "item_kinds": [
+          "mobility"
+        ],
+        "kinds": [
+          "mobility"
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "",
+        "problem": "additionalProperties"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "no item kinds",
+      "tool": "request_brief",
+      "breaks": "minItems",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "item_kinds": []
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "item_kinds",
+        "problem": "minItems"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "an item kind twice",
+      "tool": "request_brief",
+      "breaks": "uniqueItems",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "item_kinds": [
+          "eating",
+          "eating"
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "item_kinds",
+        "problem": "uniqueItems"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "a negative cursor",
+      "tool": "request_brief",
+      "breaks": "minimum",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "item_kinds": [
+          "mobility"
+        ],
+        "since_cursor": -1
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "since_cursor",
+        "problem": "minimum"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "a cited entry id sent as text",
+      "tool": "check_claims",
+      "breaks": "type",
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "claims": [
+          {
+            "item_kind": "eating",
+            "status": "differing_accounts",
+            "entries": [
+              {
+                "entry_id": 1,
+                "item_kind": "eating",
+                "basis": "reported",
+                "effective_time": "2026-09-20T15:00:00Z",
+                "recorded_time": "2026-09-20T15:10:00Z",
+                "entered_time": "2026-09-20T15:10:05Z",
+                "author_agent_id": "agent-family",
+                "author_operator": "The family",
+                "author_operator_kind": "family",
+                "author_operator_domain": null,
+                "author_domain_verified": false,
+                "untrusted": {
+                  "value": "Eats a full breakfast most days; lunch is small; dislikes spicy food; drinks about four glasses of water a day when reminded.",
+                  "quote": null,
+                  "source_ref": null,
+                  "informant_role": "daughter",
+                  "informant_key": null,
+                  "trust": "untrusted_source_text"
+                },
+                "author_principal_id": "user-daughter-a",
+                "scheduled_for": null,
+                "media_ids": []
+              },
+              {
+                "entry_id": "7",
+                "item_kind": "eating",
+                "basis": "observed",
+                "effective_time": "2026-10-10T13:00:00Z",
+                "recorded_time": "2026-10-10T13:20:00Z",
+                "entered_time": "2026-10-10T13:20:15Z",
+                "author_agent_id": "agent-gardens-notes",
+                "author_operator": "Example Gardens Assisted Living",
+                "author_operator_kind": "facility",
+                "author_operator_domain": "examplegardens.test",
+                "author_domain_verified": true,
+                "untrusted": {
+                  "value": "Ate most of breakfast and about half of lunch; drank two cups of water.",
+                  "quote": null,
+                  "source_ref": "aide-note:EXG-2026-10-10-1300",
+                  "informant_role": "aide",
+                  "informant_key": null,
+                  "trust": "untrusted_source_text"
+                },
+                "author_principal_id": "org-example-gardens",
+                "scheduled_for": null,
+                "media_ids": []
+              }
+            ]
+          }
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request",
+        "argument": "claims[0].entries[1].entry_id",
+        "problem": "type"
+      },
+      "names_argument": true
+    },
+    {
+      "case": "a date in the published format that does not exist",
+      "tool": "check_claims",
+      "breaks": null,
+      "arguments": {
+        "person_id": "person-a",
+        "purpose": "shift_handoff",
+        "claims": [
+          {
+            "item_kind": "eating",
+            "status": "differing_accounts",
+            "entries": [
+              {
+                "entry_id": 1,
+                "item_kind": "eating",
+                "basis": "reported",
+                "effective_time": "2026-09-20T15:00:00Z",
+                "recorded_time": "2026-09-20T15:10:00Z",
+                "entered_time": "2026-09-20T15:10:05Z",
+                "author_agent_id": "agent-family",
+                "author_operator": "The family",
+                "author_operator_kind": "family",
+                "author_operator_domain": null,
+                "author_domain_verified": false,
+                "untrusted": {
+                  "value": "Eats a full breakfast most days; lunch is small; dislikes spicy food; drinks about four glasses of water a day when reminded.",
+                  "quote": null,
+                  "source_ref": null,
+                  "informant_role": "daughter",
+                  "informant_key": null,
+                  "trust": "untrusted_source_text"
+                },
+                "author_principal_id": "user-daughter-a",
+                "scheduled_for": null,
+                "media_ids": []
+              },
+              {
+                "entry_id": 7,
+                "item_kind": "eating",
+                "basis": "observed",
+                "effective_time": "2026-02-30T13:00:00Z",
+                "recorded_time": "2026-10-10T13:20:00Z",
+                "entered_time": "2026-10-10T13:20:15Z",
+                "author_agent_id": "agent-gardens-notes",
+                "author_operator": "Example Gardens Assisted Living",
+                "author_operator_kind": "facility",
+                "author_operator_domain": "examplegardens.test",
+                "author_domain_verified": true,
+                "untrusted": {
+                  "value": "Ate most of breakfast and about half of lunch; drank two cups of water.",
+                  "quote": null,
+                  "source_ref": "aide-note:EXG-2026-10-10-1300",
+                  "informant_role": "aide",
+                  "informant_key": null,
+                  "trust": "untrusted_source_text"
+                },
+                "author_principal_id": "org-example-gardens",
+                "scheduled_for": null,
+                "media_ids": []
+              }
+            ]
+          }
+        ]
+      },
+      "http_status": 200,
+      "is_error": true,
+      "answer": {
+        "ok": false,
+        "reason": "invalid_request"
+      },
+      "names_argument": false
+    }
+  ]
+}

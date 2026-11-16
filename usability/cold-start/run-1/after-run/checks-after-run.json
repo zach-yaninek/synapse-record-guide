@@ -1,0 +1,36 @@
+{
+  "unchanged_claim": {
+    "ok": true,
+    "result": {
+      "person_id": "person-a",
+      "purpose": "shift_handoff",
+      "as_of": "2026-11-15T23:05:17Z",
+      "checks": [
+        {
+          "item_kind": "eating",
+          "result": "matches_record",
+          "problems": []
+        }
+      ],
+      "meaning": "Each claim was checked against the record: every cited entry exists, belongs to this person and item kind, matches what is stored, and is a standing account, and no standing account was left out. This proves correspondence to the record, not that any entry is true."
+    }
+  },
+  "relayed_claim": {
+    "ok": true,
+    "result": {
+      "person_id": "person-a",
+      "purpose": "shift_handoff",
+      "as_of": "2026-11-15T23:05:18Z",
+      "checks": [
+        {
+          "item_kind": "eating",
+          "result": "differs_from_record",
+          "problems": [
+            "value_mismatch"
+          ]
+        }
+      ],
+      "meaning": "Each claim was checked against the record: every cited entry exists, belongs to this person and item kind, matches what is stored, and is a standing account, and no standing account was left out. This proves correspondence to the record, not that any entry is true."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "item_kind": "eating",
+  "status": "differing_accounts",
+  "entries": [
+    {
+      "entry_id": 1,
+      "item_kind": "eating",
+      "basis": "reported",
+      "effective_time": "2026-09-20T15:00:00Z",
+      "recorded_time": "2026-09-20T15:10:00Z",
+      "entered_time": "2026-09-20T15:10:05Z",
+      "author_agent_id": "agent-family",
+      "author_operator": "The family",
+      "author_operator_kind": "family",
+      "author_operator_domain": null,
+      "author_domain_verified": false,
+      "untrusted": {
+        "value": "Eats a full breakfast most days; lunch is small; dislikes spicy food; drinks about four glasses of water a day when reminded.",
+        "quote": null,
+        "source_ref": null,
+        "informant_role": "daughter",
+        "informant_key": null,
+        "trust": "untrusted_source_text"
+      },
+      "author_principal_id": "user-daughter-a",
+      "scheduled_for": null,
+      "media_ids": []
+    },
+    {
+      "entry_id": 7,
+      "item_kind": "eating",
+      "basis": "observed",
+      "effective_time": "2026-10-10T13:00:00Z",
+      "recorded_time": "2026-10-10T13:20:00Z",
+      "entered_time": "2026-10-10T13:20:15Z",
+      "author_agent_id": "agent-gardens-notes",
+      "author_operator": "Example Gardens Assisted Living",
+      "author_operator_kind": "facility",
+      "author_operator_domain": "examplegardens.test",
+      "author_domain_verified": true,
+      "untrusted": {
+        "value": "Ate most of breakfast and all of lunch; drank two cups of water.",
+        "quote": null,
+        "source_ref": "aide-note:EXG-2026-10-10-1300",
+        "informant_role": "aide",
+        "informant_key": null,
+        "trust": "untrusted_source_text"
+      },
+      "author_principal_id": "org-example-gardens",
+      "scheduled_for": null,
+      "media_ids": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "started_at": "2026-11-15T23:02:13Z",
+  "claude_version": "2.1.325 (Claude Code)",
+  "model": "claude-sonnet-5-5",
+  "budget_usd": "3",
+  "timeout_seconds": 1200,
+  "command": [
+    "claude",
+    "-p",
+    "<the text of task.md>",
+    "--bare",
+    "--restricted",
+    "--model",
+    "claude-sonnet-5-5",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "mcp.json",
+    "--tools",
+    "Read,Write,Edit,Glob,Grep",
+    "--allowedTools",
+    "mcp__record",
+    "--permission-mode",
+    "acceptEdits",
+    "--permission-prompts",
+    "none",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--max-budget-usd",
+    "3",
+    "--output-format",
+    "stream-json",
+    "--verbose"
+  ],
+  "environment_names": [
+    "ANTHROPIC_API_KEY",
+    "HOME",
+    "LANG",
+    "PATH",
+    "TMPDIR"
+  ],
+  "sha256": {
+    "AGENT-GUIDE.md": "6045ef84aef2555c50e30e5dce42525b5aeafb6b0b66550c33cef38c8351e558",
+    "relayed-claim.json": "bcfdefb52be45f187175ed42dffb869d50042ecd1b65dc95fa460af8843cc0ec",
+    "task": "3b1f60c0dc69eb51972c739871716951d9770df0a2b06fc14b86a41e996794da",
+    "mcp-config": "c2040ec349a7f1fe1ff57546ef2da753ace6af45a293ef3af2363f71783ab55e"
+  },
+  "ended_at": "2026-11-15T23:02:40Z",
+  "exit_code": 0,
+  "timed_out": false,
+  "work_files_after": {
+    "AGENT-GUIDE.md": 25719,
+    "handoff.md": 2277,
+    "relayed-claim.json": 1821
+  }
+}

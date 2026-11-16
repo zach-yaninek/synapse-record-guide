@@ -1,0 +1,43 @@
+{
+  "what": "GitHub's activity log for the branch that holds this test: when GitHub's own servers recorded each push to it.",
+  "query": "GET /repos/{owner}/{repo}/activity?ref=refs/heads/usability/cold-start",
+  "retrieved_at": "2026-11-16T03:50:55Z",
+  "kept_fields": [
+    "timestamp",
+    "activity_type",
+    "ref",
+    "before",
+    "after"
+  ],
+  "left_out": "each entry's actor, id, and node_id; the actor names an account",
+  "activities": [
+    {
+      "timestamp": "2026-11-15T22:43:26Z",
+      "activity_type": "branch_creation",
+      "ref": "refs/heads/usability/cold-start",
+      "before": "0000000000000000000000000000000000000000",
+      "after": "376f1369e68e6d22ef08d4d3cebeb83b9106ca8b"
+    },
+    {
+      "timestamp": "2026-11-15T23:01:35Z",
+      "activity_type": "push",
+      "ref": "refs/heads/usability/cold-start",
+      "before": "376f1369e68e6d22ef08d4d3cebeb83b9106ca8b",
+      "after": "127d7a05e96821b86caf1cfd49186ebb424c5ec0"
+    },
+    {
+      "timestamp": "2026-11-15T23:13:23Z",
+      "activity_type": "push",
+      "ref": "refs/heads/usability/cold-start",
+      "before": "127d7a05e96821b86caf1cfd49186ebb424c5ec0",
+      "after": "49ed6c12f3fd352d37530dd2a833b655c52afeb9"
+    },
+    {
+      "timestamp": "2026-11-15T23:53:42Z",
+      "activity_type": "push",
+      "ref": "refs/heads/usability/cold-start",
+      "before": "49ed6c12f3fd352d37530dd2a833b655c52afeb9",
+      "after": "59c6a93e26220341a5fd23c68bd0e9c0bd6c4965"
+    }
+  ]
+}

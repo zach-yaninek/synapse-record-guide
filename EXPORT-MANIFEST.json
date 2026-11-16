@@ -1,0 +1,61 @@
+{
+  "source": "the private service repository at commit 6ed3e09: docs/AGENT-GUIDE.md and usability/",
+  "placeholders": {
+    "<workos-organization-id>": "the organization of the facility's shift agent, the caller in parts 2 and 3",
+    "<workos-organization-id-discharge>": "the organization of the hospital's discharge agent, which wrote entry 14",
+    "<workos-user-id>": "the test user who approved the shift agent's grant"
+  },
+  "files_changed": {
+    "usability/cold-start/run-1/after-run/brief-after-run.json": {
+      "sha256_private": "761529662984b8ad3b115a0ed8d5b5236b4eb52f7a39a1b7f9528322bdf4a8c1",
+      "sha256_public": "664dec84f1c7061bd560716d759fe04aa05135d554025e7b6d98e5a8dca8b79e",
+      "replacements": {
+        "<workos-organization-id-discharge>": 1
+      }
+    },
+    "usability/cold-start/run-1/audit-rows.jsonl": {
+      "sha256_private": "4890ee2e2ab8c137f0e30da1904f31a84ebacaa778721f81c90936d061a704d3",
+      "sha256_public": "786faf6837308d5fb93d149c1ae507586ab5a5ba2fbbd1a17358cc7392d949b3",
+      "replacements": {
+        "<workos-organization-id>": 9
+      }
+    },
+    "usability/cold-start/run-1/transcript.stream.jsonl": {
+      "sha256_private": "18a6de730890ae9e90a6e47871bde817865fd4c94175796eb4afde6b0d794f71",
+      "sha256_public": "998afbd99b64a34ea4678a1c2727461d4b07cc97a4bd623023ccb4b24c69933a",
+      "replacements": {
+        "<workos-user-id>": 2,
+        "<workos-organization-id>": 6,
+        "<workos-organization-id-discharge>": 2
+      }
+    },
+    "usability/cold-start/run-1/wire.jsonl": {
+      "sha256_private": "fab6eb93301fa042d138b91ffb326e834fde16f37f78fcc1b32d0961553a97c8",
+      "sha256_public": "3544e37bd41c58fbd212117af973fa4dcb3a565e610e1a178ba2b998cabfe613",
+      "replacements": {
+        "<workos-user-id>": 1,
+        "<workos-organization-id>": 3,
+        "<workos-organization-id-discharge>": 1
+      }
+    },
+    "usability/cold-start/setup/brief-before-run.json": {
+      "sha256_private": "c45c9cc62295fdba123e203cbe44366a3056d6d10e70cc02b1373810637a4c60",
+      "sha256_public": "d00ccf0f92d538395d0d320c4c9fb9540703ef22a542ae885c920b66588baa34",
+      "replacements": {
+        "<workos-organization-id-discharge>": 1
+      }
+    }
+  },
+  "files_copied_unchanged": 45,
+  "files_added": {
+    "usability/cold-start/guide-as-read/AGENT-GUIDE.md": {
+      "source": "docs/AGENT-GUIDE.md at private commit 45291ee",
+      "sha256": "6045ef84aef2555c50e30e5dce42525b5aeafb6b0b66550c33cef38c8351e558",
+      "why": "the guide as the agent read it in part 2; usability/cold-start/run-1/run.json records the same SHA-256"
+    }
+  },
+  "written_for_export": [
+    "README.md",
+    "EXPORT-MANIFEST.json"
+  ]
+}

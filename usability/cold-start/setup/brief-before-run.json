@@ -1,0 +1,134 @@
+{
+  "requested_at": "2026-11-15T22:40:21Z",
+  "answer": {
+    "ok": true,
+    "result": {
+      "person_id": "person-a",
+      "purpose": "shift_handoff",
+      "requested_item_kinds": [
+        "mobility",
+        "eating"
+      ],
+      "since_cursor": null,
+      "as_of": "2026-11-15T22:40:21Z",
+      "cursor": 14,
+      "claims": [
+        {
+          "item_kind": "mobility",
+          "status": "differing_accounts",
+          "entries": [
+            {
+              "entry_id": 10,
+              "item_kind": "mobility",
+              "basis": "observed",
+              "effective_time": "2026-10-10T08:30:00Z",
+              "recorded_time": "2026-10-12T09:00:00Z",
+              "entered_time": "2026-10-12T09:00:15Z",
+              "author_agent_id": "agent-gardens-notes",
+              "author_operator": "Example Gardens Assisted Living",
+              "author_operator_kind": "facility",
+              "author_operator_domain": "examplegardens.test",
+              "author_domain_verified": true,
+              "untrusted": {
+                "value": "Correction to the October 10th note: she walked to and from breakfast with her walker without assistance.",
+                "quote": "Walked to and from breakfast with the walker on her own.",
+                "source_ref": "aide-note:EXG-2026-10-12-0900",
+                "informant_role": "aide",
+                "informant_key": null,
+                "trust": "untrusted_source_text"
+              },
+              "author_principal_id": "org-example-gardens",
+              "scheduled_for": null,
+              "media_ids": []
+            },
+            {
+              "entry_id": 14,
+              "item_kind": "mobility",
+              "basis": "observed",
+              "effective_time": "2026-10-15T15:00:00Z",
+              "recorded_time": "2026-10-15T16:00:00Z",
+              "entered_time": "2026-10-28T06:35:31Z",
+              "author_agent_id": "agent-egh-discharge",
+              "author_operator": "Example General Hospital",
+              "author_operator_kind": "health_system",
+              "author_operator_domain": "examplegeneral.test",
+              "author_domain_verified": true,
+              "untrusted": {
+                "value": "Hospital physical therapy evaluation: needs one-person assist to stand from a chair or bed; walks about 20 feet with a walker and standby assistance; advised to use the walker at all times.",
+                "quote": "Needs one-person assist to stand from a chair or bed. Walks about 20 feet with a walker and standby assistance. Advised to use the walker at all times.",
+                "source_ref": "discharge-note:EGH-2026-10-16",
+                "informant_role": null,
+                "informant_key": null,
+                "trust": "untrusted_source_text"
+              },
+              "author_principal_id": "<workos-organization-id-discharge>",
+              "scheduled_for": null,
+              "media_ids": []
+            }
+          ]
+        },
+        {
+          "item_kind": "eating",
+          "status": "differing_accounts",
+          "entries": [
+            {
+              "entry_id": 1,
+              "item_kind": "eating",
+              "basis": "reported",
+              "effective_time": "2026-09-20T15:00:00Z",
+              "recorded_time": "2026-09-20T15:10:00Z",
+              "entered_time": "2026-09-20T15:10:05Z",
+              "author_agent_id": "agent-family",
+              "author_operator": "The family",
+              "author_operator_kind": "family",
+              "author_operator_domain": null,
+              "author_domain_verified": false,
+              "untrusted": {
+                "value": "Eats a full breakfast most days; lunch is small; dislikes spicy food; drinks about four glasses of water a day when reminded.",
+                "quote": null,
+                "source_ref": null,
+                "informant_role": "daughter",
+                "informant_key": null,
+                "trust": "untrusted_source_text"
+              },
+              "author_principal_id": "user-daughter-a",
+              "scheduled_for": null,
+              "media_ids": []
+            },
+            {
+              "entry_id": 7,
+              "item_kind": "eating",
+              "basis": "observed",
+              "effective_time": "2026-10-10T13:00:00Z",
+              "recorded_time": "2026-10-10T13:20:00Z",
+              "entered_time": "2026-10-10T13:20:15Z",
+              "author_agent_id": "agent-gardens-notes",
+              "author_operator": "Example Gardens Assisted Living",
+              "author_operator_kind": "facility",
+              "author_operator_domain": "examplegardens.test",
+              "author_domain_verified": true,
+              "untrusted": {
+                "value": "Ate most of breakfast and about half of lunch; drank two cups of water.",
+                "quote": null,
+                "source_ref": "aide-note:EXG-2026-10-10-1300",
+                "informant_role": "aide",
+                "informant_key": null,
+                "trust": "untrusted_source_text"
+              },
+              "author_principal_id": "org-example-gardens",
+              "scheduled_for": null,
+              "media_ids": []
+            }
+          ]
+        }
+      ],
+      "not_available": [],
+      "withheld_failed_check": [],
+      "verification": {
+        "checked": true,
+        "problems": [],
+        "meaning": "Each claim was checked against the record: every cited entry exists, belongs to this person and item kind, matches what is stored, and is a standing account, and no standing account was left out. This proves correspondence to the record, not that any entry is true."
+      }
+    }
+  }
+}

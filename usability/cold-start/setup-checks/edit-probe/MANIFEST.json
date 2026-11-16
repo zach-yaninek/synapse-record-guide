@@ -1,0 +1,32 @@
+{
+  "placeholders": [
+    "<run-dir>"
+  ],
+  "files": {
+    "edit-probe.md": {
+      "sha256_original": "e44345983f9e5d8bcfd4b3d01df2a0e05c782968821c1246604b94f064e4fd64",
+      "sha256_copy": "e44345983f9e5d8bcfd4b3d01df2a0e05c782968821c1246604b94f064e4fd64",
+      "replacements": 0
+    },
+    "probe.md": {
+      "sha256_original": "37cd0d975640955662a7020703fac92218465eaf6d63a7a73b1da0b3288b63e4",
+      "sha256_copy": "37cd0d975640955662a7020703fac92218465eaf6d63a7a73b1da0b3288b63e4",
+      "replacements": 0
+    },
+    "run.json": {
+      "sha256_original": "8ced0350c5b5a33f2136f85cd61e64ee20cee3aa0c5dfcad4b67a599d36416b6",
+      "sha256_copy": "8ced0350c5b5a33f2136f85cd61e64ee20cee3aa0c5dfcad4b67a599d36416b6",
+      "replacements": 0
+    },
+    "stderr.txt": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copy": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": 0
+    },
+    "transcript.stream.jsonl": {
+      "sha256_original": "b2b428952a6a68155fca343fe6babe927bd842530498db923f3c431b13675ab2",
+      "sha256_copy": "9dc653cae774381a81d2662c4b9dd34947b253b223d057a4df10dbdabb492554",
+      "replacements": 6
+    }
+  }
+}

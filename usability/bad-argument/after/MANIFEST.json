@@ -1,0 +1,18 @@
+{
+  "placeholders": [
+    "<workos-organization-id>",
+    "<workos-user-id>"
+  ],
+  "files": {
+    "hosted-probe.json": {
+      "sha256_original": "d1160e41b835000024b6669e298f6fb5de5e68bf2a0b00cf501b1436a617a514",
+      "sha256_copy": "84d47cca3c8f41812530e3d341bd9674b8607d672ad2f733810d79938f08531b",
+      "replacements": 4
+    },
+    "hosted-wire.jsonl": {
+      "sha256_original": "86a21be0d51f9a2f352a37db8cde6ad0e6843d3eb400d03706722fa4318b14a8",
+      "sha256_copy": "7879179f98c8551ce934baa17e23ba18050e32392ef3674e519fd6b27c0a9550",
+      "replacements": 4
+    }
+  }
+}

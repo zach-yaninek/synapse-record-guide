@@ -1,0 +1,27 @@
+{
+  "placeholders": [
+    "<run-dir>"
+  ],
+  "files": {
+    "run.json": {
+      "sha256_original": "f2ecad6e863061f16f5d4634aabdc89775fbcef778d74f8ec289fc1f60d3b90a",
+      "sha256_copy": "f2ecad6e863061f16f5d4634aabdc89775fbcef778d74f8ec289fc1f60d3b90a",
+      "replacements": 0
+    },
+    "stderr.txt": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copy": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": 0
+    },
+    "transcript.stream.jsonl": {
+      "sha256_original": "f2efb416b9ec8b07a454c86caee867c958c88c99777b4e26e3752038dafd1185",
+      "sha256_copy": "fefa7e5886c70a76257758b7b18bdac3c35538179306f1a3a8dbfbca0ff97a51",
+      "replacements": 2
+    },
+    "wire.jsonl": {
+      "sha256_original": "d807bf30e801a126a83d6f20e023ca6841604dd4ad19adf9d91d837f6866edb8",
+      "sha256_copy": "d807bf30e801a126a83d6f20e023ca6841604dd4ad19adf9d91d837f6866edb8",
+      "replacements": 0
+    }
+  }
+}

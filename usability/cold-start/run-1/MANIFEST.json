@@ -1,0 +1,57 @@
+{
+  "placeholders": [
+    "<run-dir>"
+  ],
+  "files": {
+    "after-run/brief-after-run.json": {
+      "sha256_original": "761529662984b8ad3b115a0ed8d5b5236b4eb52f7a39a1b7f9528322bdf4a8c1",
+      "sha256_copy": "761529662984b8ad3b115a0ed8d5b5236b4eb52f7a39a1b7f9528322bdf4a8c1",
+      "replacements": 0
+    },
+    "after-run/checks-after-run.json": {
+      "sha256_original": "07f041dd6ff47a08a4dbca017e76047e763419663213362602881f2f73ad231b",
+      "sha256_copy": "07f041dd6ff47a08a4dbca017e76047e763419663213362602881f2f73ad231b",
+      "replacements": 0
+    },
+    "after-run/relayed-claim-remade-after-run.json": {
+      "sha256_original": "bcfdefb52be45f187175ed42dffb869d50042ecd1b65dc95fa460af8843cc0ec",
+      "sha256_copy": "bcfdefb52be45f187175ed42dffb869d50042ecd1b65dc95fa460af8843cc0ec",
+      "replacements": 0
+    },
+    "after-run/summary.json": {
+      "sha256_original": "8bc024bec2c117753542c473ea69d4fffa6516c0224581746f1a63eb907bcd56",
+      "sha256_copy": "8bc024bec2c117753542c473ea69d4fffa6516c0224581746f1a63eb907bcd56",
+      "replacements": 0
+    },
+    "audit-rows.jsonl": {
+      "sha256_original": "4890ee2e2ab8c137f0e30da1904f31a84ebacaa778721f81c90936d061a704d3",
+      "sha256_copy": "4890ee2e2ab8c137f0e30da1904f31a84ebacaa778721f81c90936d061a704d3",
+      "replacements": 0
+    },
+    "handoff.md": {
+      "sha256_original": "3b902a12b3a7b58f27bfafb56d135b60ab71937391446c0876d3e905ab826a4b",
+      "sha256_copy": "3b902a12b3a7b58f27bfafb56d135b60ab71937391446c0876d3e905ab826a4b",
+      "replacements": 0
+    },
+    "run.json": {
+      "sha256_original": "0aca44c109ef1da7ec063bba0138be907419a03648456d6607c18b5bababb22c",
+      "sha256_copy": "0aca44c109ef1da7ec063bba0138be907419a03648456d6607c18b5bababb22c",
+      "replacements": 0
+    },
+    "stderr.txt": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copy": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": 0
+    },
+    "transcript.stream.jsonl": {
+      "sha256_original": "c5bff4a1dfcbcd05bf78ccddfcb5584563b8d5962628e89f297ff51f67e7737b",
+      "sha256_copy": "18a6de730890ae9e90a6e47871bde817865fd4c94175796eb4afde6b0d794f71",
+      "replacements": 12
+    },
+    "wire.jsonl": {
+      "sha256_original": "fab6eb93301fa042d138b91ffb326e834fde16f37f78fcc1b32d0961553a97c8",
+      "sha256_copy": "fab6eb93301fa042d138b91ffb326e834fde16f37f78fcc1b32d0961553a97c8",
+      "replacements": 0
+    }
+  }
+}
